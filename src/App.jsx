@@ -617,12 +617,17 @@ function App() {
                   Installation Guide
                 </h2>
                 <div className="modal-content">
-                  <div style={{ padding: '18px', backgroundColor: 'var(--surface-soft)', border: '1px solid var(--hairline)', borderRadius: '14px', marginBottom: '24px', marginTop: '16px' }}>
+                  <div style={{ padding: '18px', backgroundColor: '#fff5f5', border: '1px solid #ffcccc', borderRadius: '14px', marginBottom: '24px', marginTop: '16px' }}>
                     <h3 style={{ marginTop: 0, marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px', color: '#d9534f' }}>
-                      Google Play Protect Notice
+                      Why does Play Protect block this?
                     </h3>
-                    <p style={{ margin: 0, fontSize: '14px', color: 'var(--body)' }}>
-                      Since Montra is an independent app not listed on the Play Store, Google Play Protect will aggressively block its installation. To install successfully, you must temporarily disable it.
+                    <p style={{ margin: 0, fontSize: '14px', color: '#883333', lineHeight: 1.5 }}>
+                      Montra requires the <strong>SMS reading permission</strong> to automatically detect your bank transactions. 
+                      Because this app is sideloaded (downloaded outside the Play Store), Google's automated system flags 
+                      <em>any</em> app requesting SMS access as a potential risk. 
+                      <br /><br />
+                      <strong>Montra is 100% offline, open-source, and has no cloud servers.</strong> Your data never leaves your device. 
+                      To install it successfully, you must temporarily disable Play Protect.
                     </p>
                   </div>
                   
