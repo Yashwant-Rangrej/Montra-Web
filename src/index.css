@@ -893,6 +893,38 @@ footer {
   .container {
     padding: 0 16px;
   }
+  .nav-inner {
+    height: 60px;
+  }
+  .nav-logo {
+    font-size: 17px;
+    gap: 8px;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .nav-logo-img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+  .nav-actions .btn {
+    height: 38px;
+    padding: 0 16px;
+    font-size: 13px;
+    width: auto;
+    white-space: nowrap;
+  }
+  .display-xl {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+  .display-lg {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+  .display-md {
+    font-size: clamp(24px, 6vw, 32px);
+  }
   .hero {
     padding-top: 100px;
     padding-bottom: 40px;
@@ -909,6 +941,30 @@ footer {
   .btn {
     width: 100%;
   }
+  .ticker-inner {
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+  .scroll-strip-wrapper {
+    gap: var(--space-md);
+  }
+  .marquee-group {
+    gap: var(--space-md);
+  }
+  .phone-mockup {
+    width: 200px;
+    height: 384px;
+    border-width: 5px;
+  }
+  .mockup-notch {
+    width: 64px;
+    height: 14px;
+  }
+  .phone-mockup-wrapper {
+    transform: none !important;
+  }
   .features-container {
     padding: 40px 20px;
     border-radius: 24px;
@@ -924,6 +980,11 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+  .support-msg-bubble {
+    max-width: 220px;
+    font-size: 13px;
+    padding: 10px 14px;
   }
   .support-fab {
     bottom: 20px;

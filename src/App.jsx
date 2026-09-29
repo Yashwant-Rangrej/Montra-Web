@@ -145,7 +145,7 @@ function App() {
             Montra
           </a>
           <div className="nav-actions">
-            <a href="/app-release.apk" download className="btn btn-primary">
+            <a href="/Montra-Web/app-release.apk" download className="btn btn-primary">
               <Download size={16} />
               Download APK
             </a>
@@ -169,7 +169,7 @@ function App() {
         </p>
 
         <div className="hero-ctas">
-          <a href="/app-release.apk" download className="btn btn-primary" style={{ height: '52px', padding: '0 32px', fontSize: '15px' }}>
+          <a href="/Montra-Web/app-release.apk" download className="btn btn-primary" style={{ height: '52px', padding: '0 32px', fontSize: '15px' }}>
             <Download size={18} />
             Download APK
           </a>
