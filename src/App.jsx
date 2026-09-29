@@ -145,10 +145,10 @@ function App() {
             Montra
           </a>
           <div className="nav-actions">
-            <a href="/Montra-Web/app-release.apk" download className="btn btn-primary">
+            <button onClick={() => setModal('download')} className="btn btn-primary">
               <Download size={16} />
               Download APK
-            </a>
+            </button>
           </div>
         </div>
       </motion.nav>
@@ -169,10 +169,10 @@ function App() {
         </p>
 
         <div className="hero-ctas">
-          <a href="/Montra-Web/app-release.apk" download className="btn btn-primary" style={{ height: '52px', padding: '0 32px', fontSize: '15px' }}>
+          <button onClick={() => setModal('download')} className="btn btn-primary" style={{ height: '52px', padding: '0 32px', fontSize: '15px' }}>
             <Download size={18} />
             Download APK
-          </a>
+          </button>
         </div>
 
         <p className="hero-badge-note">
@@ -610,6 +610,41 @@ function App() {
         <div className="modal-overlay" onClick={() => setModal(null)}>
           <div className="modal-box" onClick={e => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setModal(null)}>✕</button>
+            {modal === 'download' && (
+              <>
+                <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <ShieldCheck size={28} color="var(--ink)" />
+                  Installation Guide
+                </h2>
+                <div className="modal-content">
+                  <div style={{ padding: '18px', backgroundColor: 'var(--surface-soft)', border: '1px solid var(--hairline)', borderRadius: '14px', marginBottom: '24px', marginTop: '16px' }}>
+                    <h3 style={{ marginTop: 0, marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px', color: '#d9534f' }}>
+                      Google Play Protect Notice
+                    </h3>
+                    <p style={{ margin: 0, fontSize: '14px', color: 'var(--body)' }}>
+                      Since Montra is an independent app not listed on the Play Store, Google Play Protect will aggressively block its installation. To install successfully, you must temporarily disable it.
+                    </p>
+                  </div>
+                  
+                  <div style={{ marginBottom: '12px', fontWeight: 600 }}>Steps to install:</div>
+                  <ol style={{ paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '15px', color: 'var(--body)' }}>
+                    <li>Open the <strong>Google Play Store</strong> app on your Android device.</li>
+                    <li>Tap your profile icon in the top right corner.</li>
+                    <li>Tap on <strong>Play Protect</strong>.</li>
+                    <li>Tap the Settings (gear) icon in the top right corner.</li>
+                    <li>Turn off <strong>"Scan apps with Play Protect"</strong>.</li>
+                    <li>Download the APK below and install it.</li>
+                  </ol>
+
+                  <div style={{ marginTop: '36px', textAlign: 'center' }}>
+                    <a href="/Montra-Web/app-release.apk" download className="btn btn-primary" style={{ width: '100%', height: '54px', fontSize: '16px' }} onClick={() => setModal(null)}>
+                      <Download size={20} />
+                      I have turned it off, Download APK
+                    </a>
+                  </div>
+                </div>
+              </>
+            )}
             {modal === 'terms' && (
               <>
                 <h2>Terms &amp; Conditions</h2>
